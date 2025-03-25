@@ -1,3 +1,5 @@
+
+
 import Link from "next/link"
 import Image from "next/image"
 import {auth, signOut, signIn} from '@/auth'
@@ -16,9 +18,12 @@ const Navbar = async () => {
                         <Link href="/startup/create">
                             <span>Create</span>
                         </Link>
-                        <button type="submit" onClick={signOut}>
-                            <span>Logout</span>
-                        </button>
+                        <form action={async () => {
+                            "use server";
+                            await signOut()}}
+                        >
+                            <button type="submit">Logout</button>
+                        </form>
 
                         <Link href={`/user/${session?.id}`}>
                             <span>{session?.user?.name}</span>
