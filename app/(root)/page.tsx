@@ -1,8 +1,8 @@
 
 export default function Home() {
   return (
-      <div className="bg-red-500">
-          I am here
-      </div>  
+      <main className="">
+          <h1 className="heading">Hello</h1>
+      </main>  
   );
 }
