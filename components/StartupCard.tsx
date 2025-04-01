@@ -19,6 +19,7 @@ const StartupCard = ({post} : {post: StartupCardType}) => {
                 <Link href={`/user/${post.author?._id}` }>
                   <p className='text-16-medium line-clamp-1'>{post.author}</p>
                 </Link>
+                
               </div>
             </div>
         </div>
